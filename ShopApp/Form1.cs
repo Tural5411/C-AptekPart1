@@ -25,6 +25,12 @@ namespace ShopApp
             //lblwelcom.Location = new Point((this.ClientSize.Width - lblwelcom.Size.Width) / 2, 50);
             //pictureBox1.Location = new Point((this.ClientSize.Width - pictureBox1.Size.Width) / 2,
             //    (this.ClientSize.Height - pictureBox1.Size.Height) / 2);
+
+            if (Properties.Settings.Default.isChecked)
+            {
+                txtmail.Text = Properties.Settings.Default.email;
+                txtpswrd.Text = Properties.Settings.Default.password;
+            }
         }
 
         
@@ -50,6 +56,21 @@ namespace ShopApp
 
                     if (selectedWorker.Password == password)
                     {
+                        if (ckrmber.Checked)
+                        {
+                            Properties.Settings.Default.email = txtmail.Text;
+                            Properties.Settings.Default.password = txtpswrd.Text;
+                            Properties.Settings.Default.isChecked = true;
+                            Properties.Settings.Default.Save();
+
+                        }
+                        else
+                        {
+                            Properties.Settings.Default.email = "";
+                            Properties.Settings.Default.password = "";
+                            Properties.Settings.Default.isChecked = false;
+                            Properties.Settings.Default.Save();
+                        }
                         WorkerDashboard wrk = new WorkerDashboard();
                         wrk.ShowDialog();
                     }

@@ -41,6 +41,7 @@
             this.lblEror = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.ckrmber = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -51,7 +52,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(626, 467);
+            this.pictureBox1.Location = new System.Drawing.Point(572, 468);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(101, 85);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -67,7 +68,7 @@
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnlogin.Location = new System.Drawing.Point(51, 477);
+            this.btnlogin.Location = new System.Drawing.Point(57, 478);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(335, 99);
             this.btnlogin.TabIndex = 1;
@@ -169,7 +170,7 @@
             // 
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(724, 467);
+            this.pictureBox3.Location = new System.Drawing.Point(670, 468);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(101, 85);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -180,19 +181,30 @@
             // 
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(480, 61);
+            this.pictureBox4.Location = new System.Drawing.Point(486, 62);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(331, 400);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
+            // ckrmber
+            // 
+            this.ckrmber.AutoSize = true;
+            this.ckrmber.Location = new System.Drawing.Point(5, 435);
+            this.ckrmber.Name = "ckrmber";
+            this.ckrmber.Size = new System.Drawing.Size(94, 17);
+            this.ckrmber.TabIndex = 11;
+            this.ckrmber.Text = "Remember me";
+            this.ckrmber.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(44)))), ((int)(((byte)(79)))));
-            this.ClientSize = new System.Drawing.Size(837, 597);
+            this.ClientSize = new System.Drawing.Size(849, 598);
+            this.Controls.Add(this.ckrmber);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txtpswrd);
             this.Controls.Add(this.txtmail);
@@ -231,6 +243,7 @@
         private System.Windows.Forms.Label lblEror;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.CheckBox ckrmber;
     }
 }
 
