@@ -16,9 +16,8 @@ namespace ShopApp
                 {
                     return false;
                 }
-               
-            }
+            }       
             return true;
-        } 
+        }
     }
 }

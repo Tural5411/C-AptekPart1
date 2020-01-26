@@ -46,20 +46,33 @@ namespace ShopApp
                 dB.Products.Add(product);
                 dB.SaveChanges();
                 MessageBox.Show("Added product","succes",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                FillGridView();
 
             }
 
 
         }
-
+        private void FillGridView()
+        {
+            dtgProduct.DataSource = dB.Products.Select(pr => new
+            {
+                pr.ProductName,
+                pr.ProductSize.Size,
+                pr.Category.Name,
+                pr.Price
+            }).ToList();
+        }
         private void ProductForm_Load(object sender, EventArgs e)
         {
+            dtgProduct.ForeColor = Color.Black;
             cmbboxCategory.Items.Add("Selected...");
             cmbboxCategory.SelectedIndex = 0;
             //dataGridView1.DataSource = dB.Products.Select(pr => { pr.ProductName,})
             cmbboxCategory.Items.AddRange(dB.Categories.Select(ct => ct.Name).ToArray());
             cmbboxSize.Items.AddRange(dB.ProductSizes.Select(ct => ct.Size).ToArray());
-            
+            FillGridView();
+
+
         }
 
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
@@ -73,6 +86,26 @@ namespace ShopApp
         private void cmbboxCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbboxCategory.Items.Remove("Selected...");
+        }
+
+        private void btnEditClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeleteClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtgProduct_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
